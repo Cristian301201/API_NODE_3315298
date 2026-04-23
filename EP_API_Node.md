@@ -2,6 +2,7 @@
 api-node 
     |-src **Aqui vive todo el codigo real del proyecto** 
         |-conig **Configuracion globales** 
+            |-database.js 
         |-controllers **Controla las peticiones HTTP** 
         |-middlewares **Intermediarios de seguridad y validacion** 
         |-models **Representa las tablas de la base de datos** 
@@ -10,7 +11,8 @@ api-node
         |-utils **Funciones reutilizables** 
         |-app.js **Configuracion de la aplicacion** 
         |-server.js **Punto de arranque** 
-    |-.env **Variables de entorno**  
+    |-.env **Variables de entorno** 
+    |-.gitignore 
 
 ## Inicializar un proyecto en la carpeta api-node 
 
@@ -20,3 +22,6 @@ instalar express: ``npm install express``
 probar app.js en el terminal ejecutamos: ``node app.js``  
 en el navegador : ``https://localhost:3000`` 
 terminar la ejecucion del servidor: ``ctrl + c`` en el terminal 
+
+Instalar otras dependencias
+``npm install dotenv sequelize mysql2 pg pg-hstore``
