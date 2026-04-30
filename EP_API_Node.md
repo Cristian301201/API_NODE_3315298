@@ -25,3 +25,25 @@ terminar la ejecucion del servidor: ``ctrl + c`` en el terminal
 
 Instalar otras dependencias
 ``npm install dotenv sequelize mysql2 pg pg-hstore``
+
+Cambios en el package.json
+
+``
+ "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+``
+se puede ejecujat el server con ``npm start``
+
+Modelo (Entidad Usuario)
+ruta src/models/usuario.model.js
+
+Servicio(Lógin de negocio)
+ruta src/services/usuario.service.js
+
+Controlador
+ruta src/controllers/usuario.controller.js
+
+Rutas
+ruta src/routes/usuario.routes.js
