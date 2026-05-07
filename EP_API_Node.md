@@ -6,7 +6,8 @@ api-node
         |-controllers **Controla las peticiones HTTP** 
         |-middlewares **Intermediarios de seguridad y validacion** 
         |-models **Representa las tablas de la base de datos** 
-        |-routes **Define las URLs de la API** 
+        |-routes **Define las URLs de la API**
+        |-validators **Validar Campos** 
         |-services **Logica del negocio** 
         |-utils **Funciones reutilizables** 
         |-app.js **Configuracion de la aplicacion** 
@@ -47,3 +48,21 @@ ruta src/controllers/usuario.controller.js
 
 Rutas
 ruta src/routes/usuario.routes.js
+
+Dependencias de seguridad
+npm install bcryptjs jsonwebtoken cors helmet morgan express-validator express-rate-limit
+
+Dependencias de desarrollo
+npm install -D nodemon
+
+"scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+
+Ejecutar modo desarrollador: ``nmp run dev``, con esto se pueden hacer cambios en el codigo sin reiniciar el server
+
+Configuracion de seguridad en .env
+JW_SECRET = mi_clave
+SUPERADMIN_EMAIL = superadmin@education.com
+SUPERADMIN_PASSWORD = Admin123*
