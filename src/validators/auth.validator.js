@@ -1,5 +1,5 @@
 const {body} = require ('express-validator');
-const registervalidator = [
+const registerValidator = [
     body('nombre')
     .notEmpty()
     .withMessage('Nombre requerido'),
@@ -17,4 +17,4 @@ const registervalidator = [
     .withMessage('Contraseña minimo 6 caracteres')
 ];
 
-module.exports = {registervalidator};
+module.exports = {registerValidator};

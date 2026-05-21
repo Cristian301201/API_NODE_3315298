@@ -7,13 +7,13 @@ const validarJWT = (req, res, next) => {
 
     try{
         const payload = jwt.verify(token, process.env.JWT_SECRET);
-        req.usurio = payload;
+        req.usuario = payload;
         next()
     }catch  (error) {
         return res.status(401).json({msg: 'token invalido'});
     }
 };
 
-moduelo.exports = {
+module.exports = {
     validarJWT
 };

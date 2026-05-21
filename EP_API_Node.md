@@ -7,6 +7,7 @@ api-node
         |-middlewares **Intermediarios de seguridad y validacion** 
         |-models **Representa las tablas de la base de datos** 
         |-routes **Define las URLs de la API**
+        |-seeders **Datos pregrabados**
         |-validators **Validar Campos** 
         |-services **Logica del negocio** 
         |-utils **Funciones reutilizables** 

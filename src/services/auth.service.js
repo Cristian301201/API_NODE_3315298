@@ -37,7 +37,7 @@ const login = async (
         throw new Error ('Contraseña incorrecta.');
     }
     const token = generarJWT(usuario);
-    return {usuaio,token};  
+    return {usuario,token};  
 };
 
 module.exports = {
