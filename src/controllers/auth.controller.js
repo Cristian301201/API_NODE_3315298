@@ -20,7 +20,12 @@ const login = async (req, res) =>{
     }
 };
 
+const perfil = async (req, res) => {
+    res.json({usuario:req.usuario});
+}
+
 module.exports = {
     registro,
-    login
+    login,
+    perfil
 };

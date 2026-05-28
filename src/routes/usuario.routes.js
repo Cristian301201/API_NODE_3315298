@@ -9,12 +9,24 @@ const {crearUsuarioValidator} = require('../validators/usuario.validator');
 
 router.post('/', [
     validarJWT,
-    esAdminRole,
+    esAdminRole,    
     crearUsuarioValidator,
-    validarCampos],usuarioController.crear);
+    validarCampos
+],usuarioController.crear);
 
 router.get('/',[
     validarJWT,
-    esAdminRole],usuarioController.listar);
+    esAdminRole
+],usuarioController.listar);
+
+router.delete('/:id', [
+    validarJWT,
+    esAdminRole
+],usuarioController.eliminar);
+
+router.put('/:id',[
+    validarJWT,
+    esAdminRole
+],usuarioController.actualizar);
 
 module.exports = router;
