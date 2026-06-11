@@ -2,6 +2,7 @@ require ('dotenv').config();
 const app = require('./app');
 const sequelize = require('./config/database');
 const {crearSuperAdmin} = require('./seeders/superadmin.seed');
+require ('../src/models');
 
 
 const PORT = process.env.PORT || 3000;
